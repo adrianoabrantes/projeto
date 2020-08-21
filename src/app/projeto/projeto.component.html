@@ -8,27 +8,27 @@
         <option value="error">ERROR</option>
       </select>
     </div>
-    <br>
-    <br>
 
     <p>Class e style biding</p>
-    <div class="alert" [class.error]="classe.value == 'error'">
-      ERROR
-    </div>
-    <br>
+    <div class="md6">
 
-    <div class="alert" [class.warning]="classe.value == 'warning'">
-      WARNING
-    </div>
-    <br>
+      <div class="alert" [class.error]="classe.value == 'error'">
+        ERROR
+      </div>
+      <br>
 
-    <div class="alert" [class.info]="classe.value == 'info'">
-      INFO
+      <div class="alert" [class.warning]="classe.value == 'warning'">
+        WARNING
+      </div>
+      <br>
+
+      <div class="alert" [class.info]="classe.value == 'info'">
+        INFO
+      </div>
+      <div class="alert" [class.success]="classe.value == 'success'">
+        SUSCCESS
+      </div>
     </div>
-    <div class="alert" [class.success]="classe.value == 'success'">
-      SUSCCESS
-    </div>
-    <br>
 
     <div class="alert {{classe.value}}" [style.display]="classe.value == 'error' ? 'block' : 'none'">
       Destacando item selecionado no combo box
@@ -41,8 +41,11 @@
     </div>
     <br>
 
-    <div class="card md6">
-      <input type="text" (keyup)="onKeyUp()" placeholder="Texto aqui">
+    <div class="card md8">
+      <input type="text" (keyup)="onKeyUp($event)" placeholder="Texto aqui">
+      <input type="text" (blur)="lostFocus($event)" placeholder="Texto aqui">
+      <p [class.mudar-cor]="mudar" (mouseover)="mudarCor()" (mouseout)="mudarCor()">{{texto1}}</p>
+      <p>{{texto2}}</p>
     </div>
   </article>
   <br>
@@ -50,6 +53,5 @@
   <div class="card md6">
     <button class="third">Me clique</button>
     <button class="fourth">Me clique</button>
-
   </div>
 </form>
