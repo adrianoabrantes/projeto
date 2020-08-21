@@ -1,0 +1,55 @@
+<form action="">
+  <article>
+    <div>
+      <select #classe (change)="0">
+        <option value="success">SUCCESS</option>
+        <option value="info">INFO</option>
+        <option value="warning">WARNING</option>
+        <option value="error">ERROR</option>
+      </select>
+    </div>
+    <br>
+    <br>
+
+    <p>Class e style biding</p>
+    <div class="alert" [class.error]="classe.value == 'error'">
+      ERROR
+    </div>
+    <br>
+
+    <div class="alert" [class.warning]="classe.value == 'warning'">
+      WARNING
+    </div>
+    <br>
+
+    <div class="alert" [class.info]="classe.value == 'info'">
+      INFO
+    </div>
+    <div class="alert" [class.success]="classe.value == 'success'">
+      SUSCCESS
+    </div>
+    <br>
+
+    <div class="alert {{classe.value}}" [style.display]="classe.value == 'error' ? 'block' : 'none'">
+      Destacando item selecionado no combo box
+    </div>
+    <br>
+
+    <div class="card md8">
+      <button class="primary" (click)="btnPrimaryClick()">Me clique</button>
+      <button class="second">Me clique</button>
+    </div>
+    <br>
+
+    <div class="card md6">
+      <input type="text" (keyup)="onKeyUp()" placeholder="Texto aqui">
+    </div>
+  </article>
+  <br>
+
+  <div class="card md6">
+    <button class="third">Me clique</button>
+    <button class="fourth">Me clique</button>
+
+  </div>
+</form>
