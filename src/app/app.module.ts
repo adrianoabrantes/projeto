@@ -1,20 +1,34 @@
-import { ProjetoModule } from './projeto/projeto.module';
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CursoComponent } from './curso/curso.component';
+import { ExibirComponent } from './exibir/exibir.component';
+import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { ConsumirApiRestComponent } from './consumir-api-rest/consumir-api-rest.component';
+import { ConsultaCepComponent } from './consulta-cep/consulta-cep.component';
+import { FormatarCamposComponent } from './formatar-campos/formatar-campos.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CursoComponent,
+    ExibirComponent,
+    CalculadoraComponent,
+    ConsumirApiRestComponent,
+    ConsultaCepComponent,
+    FormatarCamposComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProjetoModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

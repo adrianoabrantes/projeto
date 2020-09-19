@@ -1,0 +1,9 @@
+
+<div class="card">
+  <h1>{{nomeCurso}}</h1>
+  <input type="text" [(ngModel)]="nomeCurso" placeholder="Nome do curso">
+  <input type="text" maxlength="11" (blur)="formatarCpf($event)" value="{{cpf}}" placeholder="CPF aqui">
+  <input type="text" maxlength="14" (blur)="formatarCnpj($event)" value="{{cnpj}}" placeholder="CNPJ aqui">
+  <input type="text" maxlength="10" (blur)="formatarFoneFixo($event)" value="{{foneFixo}}" placeholder="Telefone aqui">
+  <input type="text" maxlength="11" (blur)="formatarCelular($event)" value="{{celular}}" placeholder="Celular aqui">
+</div>

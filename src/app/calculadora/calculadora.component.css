@@ -1,0 +1,16 @@
+input {
+  text-align: right;
+  font-weight: bold;
+}
+
+div.teclado {
+  width: 310px;
+}
+
+input {
+  width: 280px;
+}
+
+div {
+  background-color: coral;
+}

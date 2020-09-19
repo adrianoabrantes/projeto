@@ -1,0 +1,7 @@
+<div class="card">
+  <div class="teclado">
+    <input [(ngModel)]="display" readonly>
+    <button value="{{item}}" (click)="clickBotao($event)" mat-button class="primary a"
+      *ngFor="let item of botoesTeclado">{{item}}</button>
+  </div>
+</div>

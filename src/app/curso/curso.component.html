@@ -1,0 +1,7 @@
+<div class="card">
+  <select [(ngModel)]="cursoSelecionado" (change)="mudouValor($event.target.value)">
+    <option *ngFor="let curso of cursos" [ngValue]="curso">{{ curso.nome }}</option>
+    <p>{{cursoSelecionado}}</p>
+  </select>
+  <br>
+</div>

@@ -1,0 +1,22 @@
+<div class="card">
+  <button [class]="item.class" (click)="eventoClick(item.link)" *ngFor="let item of menuItens">{{ item.label }}</button>
+</div>
+
+<div *ngIf="pagina === 'curso'">
+  <app-curso></app-curso>
+</div>
+<div *ngIf="pagina === 'consulta'">
+  <app-consulta-cep></app-consulta-cep>
+</div>
+<div *ngIf="pagina === 'consumir'">
+  <app-consumir-api-rest></app-consumir-api-rest>
+</div>
+<div *ngIf="pagina === 'formatar'">
+  <app-formatar-campos></app-formatar-campos>
+</div>
+<div *ngIf="pagina === 'calculadora'">
+  <app-calculadora></app-calculadora>
+</div>
+<div *ngIf="pagina === 'exibir'">
+  <app-exibir></app-exibir>
+</div>

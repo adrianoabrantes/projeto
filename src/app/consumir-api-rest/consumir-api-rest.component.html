@@ -1,0 +1,7 @@
+<h1>Carros</h1>
+
+<select [(ngModel)]="carSelected" (ngModelChange)="carSelect($event)">
+  <option *ngFor="let car of cars" [ngValue]="car">{{car.model}}</option>
+</select>
+
+<h3>Price:$ {{carPrice}}</h3>

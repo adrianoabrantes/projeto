@@ -1,0 +1,22 @@
+<div class="card">
+  <input class="dm6" type="text" placeholder="logradouro" [(ngModel)]="logradouro">
+  <input class="" type="text" placeholder="bairro" [(ngModel)]="bairro">
+  <input class="" type="text" placeholder="complemento" [(ngModel)]="complemento">
+  <input class="" type="text" placeholder="cidade" [(ngModel)]="localidade">
+
+  <select [(ngModel)]="estadoSelected">
+    <option *ngFor="let estado of estados">{{estado}}</option>
+  </select>
+
+  <input class="" type="text" placeholder="ibge" [(ngModel)]="ibge">
+  <input class="dm0" type="text" placeholder="gia" [(ngModel)]="gia">
+  <input class="dm0" type="text" placeholder="ddd" [(ngModel)]="ddd">
+  <input class="dm0" type="text" placeholder="siafi" [(ngModel)]="siafi">
+  <input class="" type="text" required maxlength="8" (blur)="formatarCep($event)" value="{{cep}}"
+    placeholder="Cep aqui">
+  <button class="primary" [disabled]="cep === ''" (click)="consultaCep()">Buscar cep</button>
+  <button class="second" (click)="limparCampos()">Limpar</button>
+  <div class="alerta error" [hidden]="!campoVazio">
+    Campo não foi preenchido!
+  </div>
+</div>
